@@ -1,0 +1,109 @@
+{
+    "Jade White": {
+        "hex": "#ffffff",
+        "isOption": true
+    },
+    "Beige": {
+        "hex": "#f7e6de",
+        "isOption": true
+    },
+    "Silver": {
+        "hex": "#a6a9aa",
+        "isOption": true
+    },
+    "Bronze": {
+        "hex": "#847d48",
+        "isOption": true
+    },
+    "Magenta": {
+        "hex": "#ec008c",
+        "isOption": true
+    },
+    "Pink": {
+        "hex": "#f55a74",
+        "isOption": true
+    },
+    "Orange": {
+        "hex": "#ff6a13",
+        "isOption": true
+    },
+    "Gold": {
+        "hex": "#e4bd68",
+        "isOption": true
+    },
+    "Yellow": {
+        "hex": "#f4ee2a",
+        "isOption": true
+    },
+    "Mistletoe Green": {
+        "hex": "#3f8e43",
+        "isOption": true
+    },
+    "Cyan": {
+        "hex": "#0086d6",
+        "isOption": true
+    },
+    "Purple": {
+        "hex": "#5e43b7",
+        "isOption": true
+    },
+    "Blue Gray": {
+        "hex": "#5b6579"
+    },
+    "Black": {
+        "hex": "#000000",
+        "isOption": true
+    },
+    "Bambu Green": {
+        "hex": "#16c344",
+        "isOption": true
+    },
+    "Blue": {
+        "hex": "#0a2989",
+        "isOption": true
+    },
+    "Brown": {
+        "hex": "#9d432c"
+    },
+    "Gray": {
+        "hex": "#8e9089",
+        "isOption": true
+    },
+    "Red": {
+        "hex": "#c12e1f",
+        "isOption": true
+    },
+    "Light Gray": {
+        "hex": "#d1d3d5"
+    },
+    "Dark Gray": {
+        "hex": "#545454"
+    },
+    "Maroon Red": {
+        "hex": "#9d2235"
+    },
+    "Sunflower Yellow": {
+        "hex": "#fec600"
+    },
+    "Turquoise": {
+        "hex": "#00b1b7"
+    },
+    "Indigo Purple": {
+        "hex": "#482960"
+    },
+    "Bright Green": {
+        "hex": "#becf00"
+    },
+    "Cocoa Brown": {
+        "hex": "#6f5034"
+    },
+    "Hot Pink": {
+        "hex": "#f5547c"
+    },
+    "Pumpkin Orange": {
+        "hex": "#ff9016"
+    },
+    "Cobalt Blue": {
+        "hex": "#0056b8"
+    }
+}
