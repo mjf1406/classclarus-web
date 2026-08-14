@@ -63,6 +63,7 @@ const ko = {
     titleSuffix: "를 부여하세요",
     description:
       "app.classclarus.com에서 클라우드로 이용하거나, 데스크톱 또는 LAN에서 셀프 호스팅으로 무료 운영하세요. 포인트, 행동, 보상을 실시간으로 추적합니다.",
+    learnMore: "자세히 보기",
   },
   tools: {
     sectionLabel: "교실 도구",

@@ -54,21 +54,29 @@ export const HeroSection = () => {
             <Button
               asChild
               variant="ghost"
-              className="w-5/6 md:w-1/4 h-auto py-2 font-bold"
+              className="w-5/6 md:w-1/4 font-bold"
             >
-              <a
-                href={SELF_HOST_URL}
-                target="_blank"
-                rel="noreferrer"
-                className="flex flex-col items-center leading-tight"
-              >
-                <span>{tCommon("selfHost")}</span>
-                <span className="text-xs font-normal text-muted-foreground">
-                  {tCommon("selfHostExpertsOnly")}
-                </span>
-              </a>
+              <a href="#tools">{t("learnMore")}</a>
             </Button>
           </div>
+
+          <Button
+            asChild
+            variant="ghost"
+            className="h-auto py-2 font-bold"
+          >
+            <a
+              href={SELF_HOST_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="flex flex-col items-center leading-tight"
+            >
+              <span>{tCommon("selfHost")}</span>
+              <span className="text-xs font-normal text-muted-foreground">
+                {tCommon("selfHostExpertsOnly")}
+              </span>
+            </a>
+          </Button>
         </div>
       </div>
     </section>

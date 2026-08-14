@@ -64,6 +64,7 @@ const pt = {
     titleSuffix: "seus alunos",
     description:
       "Use o ClassClarus na nuvem em app.classclarus.com, ou execute gratuitamente no desktop ou na LAN com auto-hospedagem. Acompanhe pontos, comportamentos e recompensas em tempo real.",
+    learnMore: "Saiba mais",
   },
   tools: {
     sectionLabel: "Ferramentas de sala de aula",

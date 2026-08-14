@@ -64,6 +64,7 @@ const nl = {
     titleSuffix: "je leerlingen",
     description:
       "Gebruik ClassClarus in de cloud op app.classclarus.com, of draai het gratis op je desktop of LAN met zelf-hosting. Volg punten, gedrag en beloningen in realtime.",
+    learnMore: "Meer informatie",
   },
   tools: {
     sectionLabel: "Klaslokaaltools",

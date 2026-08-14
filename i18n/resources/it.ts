@@ -64,6 +64,7 @@ const it = {
     titleSuffix: "i tuoi studenti",
     description:
       "Usa ClassClarus nel cloud su app.classclarus.com, oppure eseguilo gratuitamente sul desktop o in LAN con il self-hosting. Monitora punti, comportamenti e premi in tempo reale.",
+    learnMore: "Scopri di più",
   },
   tools: {
     sectionLabel: "Strumenti per la classe",

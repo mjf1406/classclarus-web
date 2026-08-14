@@ -63,6 +63,7 @@ const zht = {
     titleSuffix: "您的學生",
     description:
       "在 app.classclarus.com 雲端使用 ClassClarus，或在桌面或區域網路透過自託管免費運行。即時追蹤積分、行為和獎勵。",
+    learnMore: "了解更多",
   },
   tools: {
     sectionLabel: "課堂工具",

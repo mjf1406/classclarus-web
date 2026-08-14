@@ -64,6 +64,7 @@ export default {
     titleSuffix: "vos élèves",
     description:
       "Utilisez ClassClarus dans le cloud sur app.classclarus.com, ou exécutez-le gratuitement sur votre bureau ou LAN avec l'auto-hébergement. Suivez points, comportements et récompenses en temps réel.",
+    learnMore: "En savoir plus",
   },
   tools: {
     sectionLabel: "Outils de classe",

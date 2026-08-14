@@ -64,6 +64,7 @@ export default {
     titleSuffix: "a tus estudiantes",
     description:
       "Usa ClassClarus en la nube en app.classclarus.com, o ejecútalo gratis en tu escritorio o LAN con autoalojamiento. Sigue puntos, comportamientos y recompensas en tiempo real.",
+    learnMore: "Más información",
   },
   tools: {
     sectionLabel: "Herramientas del aula",

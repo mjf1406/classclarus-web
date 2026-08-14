@@ -64,6 +64,7 @@ export default {
     titleSuffix: "zu motivieren",
     description:
       "Nutzen Sie ClassClarus in der Cloud unter app.classclarus.com oder führen Sie es kostenlos auf Ihrem Desktop oder LAN mit Selbst-Hostung aus. Verfolgen Sie Punkte, Verhalten und Belohnungen in Echtzeit.",
+    learnMore: "Mehr erfahren",
   },
   tools: {
     sectionLabel: "Klassenzimmer-Tools",

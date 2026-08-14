@@ -60,7 +60,7 @@ export const ToolsSection = () => {
   const { t } = useTranslation("tools");
 
   return (
-    <section id="tools" className="container py-24 sm:py-32">
+    <section id="tools" className="container scroll-mt-28 py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         {t("sectionLabel")}
       </h2>

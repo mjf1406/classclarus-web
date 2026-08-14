@@ -63,6 +63,7 @@ const th = {
     titleSuffix: "ให้นักเรียน",
     description:
       "ใช้ ClassClarus บนคลาวด์ที่ app.classclarus.com หรือใช้งานฟรีบนเดสก์ท็อปหรือ LAN ด้วยการโฮสต์เอง ติดตามคะแนน พฤติกรรม และรางวัลแบบเรียลไทม์",
+    learnMore: "เรียนรู้เพิ่มเติม",
   },
   tools: {
     sectionLabel: "เครื่องมือห้องเรียน",

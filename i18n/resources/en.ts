@@ -63,6 +63,7 @@ const en = {
     titleSuffix: "Your Students",
     description:
       "Use ClassClarus in the cloud at app.classclarus.com, or run it free on your desktop or LAN with self-hosting. Track points, behaviors, and rewards in real time.",
+    learnMore: "Learn more",
   },
   tools: {
     sectionLabel: "Classroom Tools",

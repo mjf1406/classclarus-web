@@ -63,6 +63,7 @@ const ja = {
     titleSuffix: "を引き出す",
     description:
       "app.classclarus.com でクラウド版を利用するか、デスクトップ版やセルフホストで無料で運用できます。ポイント、行動、報酬をリアルタイムで追跡します。",
+    learnMore: "詳しく見る",
   },
   tools: {
     sectionLabel: "教室ツール",
