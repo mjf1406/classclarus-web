@@ -1,0 +1,24 @@
+---
+description: All user-facing copy must use i18n; every locale must contain each English key
+alwaysApply: true
+globs: ["**/*.tsx", "**/*.ts", "i18n/resources/**/*.ts"]
+---
+
+# i18n UI Copy
+
+All user-facing strings on classclarus-web must use `useTranslation` / `Trans` from `react-i18next`, not hardcoded text.
+
+## Adding copy
+
+1. Add the key to `i18n/resources/en.ts` first (source of truth).
+2. Mirror the key in every locale file: `de`, `es`, `fr`, `it`, `ja`, `ko`, `nl`, `pt`, `ru`, `th`, `uk`, `zhs`, `zht`.
+3. `engb` reuses the English catalog — do not add `engb.ts`.
+4. Run `bun test` — `i18n/catalog.test.ts` enforces key parity across locales.
+
+## Namespaces
+
+Use feature namespaces (`hero`, `pricing`, `faq`, etc.) or `common` for shared chrome. Keep each namespace flat (`Record<string, string>`).
+
+## Language preference
+
+Matches classclarus-app: `classclarus-language` in localStorage plus a `classclarus-language` cookie on `.classclarus.com` so the marketing site and app share the same preference across subdomains. No locale-prefixed routes.

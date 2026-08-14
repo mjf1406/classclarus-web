@@ -15,7 +15,7 @@ export default function CookiePolicyPage() {
         <div className="mx-auto max-w-4xl prose prose-neutral dark:prose-invert">
           <h1 className="text-4xl font-bold mb-2">Cookie Policy</h1>
           <p className="text-muted-foreground mb-8">
-            <strong>Last Updated:</strong> January 23, 2026
+            <strong>Last Updated:</strong> August 14, 2026
           </p>
 
           <div className="space-y-8">
@@ -24,13 +24,14 @@ export default function CookiePolicyPage() {
                 1. Strictly Necessary Cookies
               </h2>
               <p className="text-muted-foreground">
-                ClassClarus only uses <strong>Strictly Necessary</strong> cookies. 
-                These are essential for you to browse the website and use its 
-                features, specifically our secure login system.
+                ClassClarus only uses <strong>Strictly Necessary</strong> cookies.
+                These are essential for you to browse the website and use its
+                features, specifically our secure login system on cloud.
               </p>
               <p className="text-muted-foreground mt-4">
-                We do not use any cookies for advertising, tracking, or 
-                behavioral analytics.
+                We do not use any cookies for advertising, tracking, or
+                behavioral analytics. Desktop and self-host installs run locally
+                and do not use this marketing site&apos;s cookies.
               </p>
             </section>
 
@@ -39,9 +40,10 @@ export default function CookiePolicyPage() {
                 2. Authentication Provider
               </h2>
               <p className="text-muted-foreground">
-                Our application uses <strong>Google OAuth</strong> to manage secure user authentication. 
-                These cookies are required to verify your identity and maintain 
-                your session.
+                On <strong>cloud</strong>, our application uses{" "}
+                <strong>Google OAuth</strong> to manage secure user
+                authentication. These cookies are required to verify your
+                identity and maintain your session.
               </p>
               <div className="overflow-x-auto my-6">
                 <table className="w-full border-collapse border border-border text-sm">

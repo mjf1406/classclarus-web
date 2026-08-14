@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         <div className="mx-auto max-w-4xl prose prose-neutral dark:prose-invert">
           <h1 className="text-4xl font-bold mb-2">Privacy Policy</h1>
           <p className="text-muted-foreground mb-2">
-            <strong>Last Updated:</strong> January 23, 2026
+            <strong>Last Updated:</strong> August 14, 2026
           </p>
 
           <div className="space-y-8">
@@ -47,7 +47,8 @@ export default function PrivacyPolicyPage() {
 
               <h3 className="text-xl font-medium mt-6 mb-2">Account Data</h3>
               <p className="text-muted-foreground">
-                When you authenticate via Google, we collect:
+                On <strong>cloud</strong> (app.classclarus.com), when you sign in
+                with Google, we collect:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>First name and last name</li>
@@ -56,7 +57,8 @@ export default function PrivacyPolicyPage() {
               </ul>
                     <br />
               <p className="text-muted-foreground">
-                When you authenticate via email, we collect:
+                On <strong>cloud</strong>, when you sign in with email, or on{" "}
+                <strong>desktop and self-host</strong> installs, we collect:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>Email address</li>
@@ -87,12 +89,23 @@ export default function PrivacyPolicyPage() {
               </ul>
 
               <h3 className="text-xl font-medium mt-6 mb-2">
-                Third-Party Integrations
+                Third-Party Services
               </h3>
               <p className="text-muted-foreground">
-                For users who sync with <strong>Google Classroom</strong>, we
-                import class rosters containing student names and email
-                addresses only. This information is required to authenticate and authorize the student when they login.
+                On cloud, we use <strong>Google OAuth</strong> for sign-in. We
+                do not import data from Google Classroom.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                Cloud subscriptions are processed by{" "}
+                <strong>Polar</strong>. Polar handles payment details, tax
+                calculation, and invoicing — ClassClarus does not store your
+                card information.
+              </p>
+              <p className="text-muted-foreground mt-4">
+                On <strong>desktop and self-host</strong> installs, billing is
+                disabled and classroom data (users, classes, uploads) is stored
+                locally on the teacher&apos;s machine or your Docker volume, not
+                on our cloud infrastructure.
               </p>
 
               <h3 className="text-xl font-medium mt-6 mb-2">Usage Logs</h3>

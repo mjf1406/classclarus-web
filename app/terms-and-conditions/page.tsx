@@ -18,7 +18,7 @@ export default function TermsAndConditionsPage() {
             Terms and Conditions
           </h1>
           <p className="text-muted-foreground mb-8 text-center">
-            <strong>Last Updated:</strong> January 23, 2026
+            <strong>Last Updated:</strong> August 14, 2026
           </p>
 
           <div className="space-y-8">
@@ -69,20 +69,29 @@ export default function TermsAndConditionsPage() {
                 3. User Accounts & Authentication
               </h2>
               <p className="text-muted-foreground">
-                ClassClarus uses <strong>Google OAuth</strong> for
-                authentication. We do not store or manage your passwords.
+                ClassClarus is available in the cloud (app.classclarus.com), as a
+                downloadable desktop app, and as a self-hosted install on your
+                LAN. Authentication and billing differ by install type.
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>
-                  <strong>Security:</strong> You are responsible for maintaining
-                  the security of your Google account. ClassClarus is not liable
-                  for unauthorized access resulting from a compromised Google
-                  account.
+                  <strong>Cloud:</strong> Sign in with Google OAuth or email.
+                  We do not store your Google password. A subscription (via
+                  Polar) is required to create classes after your free trial.
+                </li>
+                <li>
+                  <strong>Desktop &amp; self-host:</strong> Email and password
+                  only. No Polar billing. The first account on a local instance
+                  becomes the instance admin.
+                </li>
+                <li>
+                  <strong>Security:</strong> You are responsible for keeping
+                  your sign-in credentials secure. ClassClarus is not liable for
+                  unauthorized access resulting from compromised accounts.
                 </li>
                 <li>
                   <strong>Accuracy:</strong> You must provide accurate
-                  information when syncing with Google Classroom or creating
-                  manual rosters.
+                  information when creating rosters and class records.
                 </li>
               </ul>
             </section>
@@ -119,13 +128,15 @@ export default function TermsAndConditionsPage() {
                 5. Purchases and Payment
               </h2>
               <p className="text-muted-foreground">
-                We accept credit card payments for premium subscriptions.
+                Cloud subscriptions are processed by <strong>Polar</strong>.
+                Desktop and self-hosting remain free. We do not store card
+                details on ClassClarus servers.
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
                 <li>
-                  <strong>Pricing:</strong> Prices are subject to change. For
-                  institutional/school-wide licenses, please contact us
-                  directly.
+                  <strong>Pricing:</strong> Cloud plans are $3/month or $30/year
+                  after a 90-day trial. Prices may change; existing subscribers
+                  are notified before changes take effect.
                 </li>
                 <li>
                   <strong>Refunds:</strong> Subscription cancellations take

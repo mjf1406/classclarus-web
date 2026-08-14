@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Navbar } from "@/components/layout/navbar";
-import { ThemeProvider } from "@/components/layout/theme-provider";
+import { AppProviders } from "@/components/providers/app-providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: "ClassClarus - Gamify Your Classroom",
     template: "%s | ClassClarus",
   },
-  description: "Motivate students with points, behaviors, and rewards. Free classroom gamification platform for teachers. Track progress in real-time and create an engaging learning environment.",
+  description: "Motivate students with points, behaviors, and rewards. Use ClassClarus in the cloud, or download the desktop app and self-host for free.",
   keywords: ["classroom gamification", "student motivation", "teacher tools", "classroom management", "education technology", "points system", "behavior tracking", "rewards for students"],
   authors: [{ name: "ClassClarus" }],
   creator: "ClassClarus",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: "https://classclarus.com",
     siteName: "ClassClarus",
     title: "ClassClarus - Gamify Your Classroom",
-    description: "Motivate students with points, behaviors, and rewards. Free classroom gamification platform for teachers.",
+    description: "Motivate students with points, behaviors, and rewards. Cloud, desktop, and self-host options for teachers.",
     images: [
       {
         url: "/og-image.png",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ClassClarus - Gamify Your Classroom",
-    description: "Motivate students with points, behaviors, and rewards. Free classroom gamification platform for teachers.",
+    description: "Motivate students with points, behaviors, and rewards. Cloud, desktop, and self-host options for teachers.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -43,15 +43,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      { url: "/brand/icon-removebg.webp", type: "image/webp" },
-      { url: "/brand/icon-removebg.svg", type: "image/svg+xml" },
-      { url: "/brand/icon-removebg-xs.webp", sizes: "16x16", type: "image/webp" },
-      { url: "/brand/icon-removebg-small.webp", sizes: "32x32", type: "image/webp" },
-    ],
-    apple: [
-      { url: "/brand/icon-removebg.webp", sizes: "180x180", type: "image/webp" },
-    ],
+    icon: [{ url: "/brand/favicon.webp", type: "image/webp" }],
+    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -63,16 +56,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn("min-h-screen bg-background", inter.className)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <AppProviders>
           <Navbar />
 
           {children}
-        </ThemeProvider>
+        </AppProviders>
       </body>
     </html>
   );

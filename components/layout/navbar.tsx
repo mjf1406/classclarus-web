@@ -3,6 +3,8 @@
 import { Menu, ArrowRight } from "lucide-react";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import {
   Sheet,
   SheetContent,
@@ -21,73 +23,66 @@ import {
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
 import { Button } from "../ui/button";
-import Link from "next/link";
 import { ToggleTheme } from "./toogle-theme";
-import { WEBAPP_URL } from "@/lib/config";
+import { LanguageSwitcher } from "@/components/i18n/LanguageSwitcher";
+import { APP_URL } from "@/lib/config";
 
 interface RouteProps {
   href: string;
-  label: string;
+  labelKey: "pricing" | "faq" | "about" | "contact";
 }
 
 interface FeatureProps {
-  title: string;
-  description: string;
+  titleKey: "pointsBehaviorsTitle" | "assignmentsGradingTitle" | "classroomToolsTitle";
+  descriptionKey:
+    | "pointsBehaviorsDescription"
+    | "assignmentsGradingDescription"
+    | "classroomToolsDescription";
   href: string;
 }
 
 const routeList: RouteProps[] = [
-  {
-    href: "/pricing",
-    label: "Pricing",
-  },
-  {
-    href: "/faq",
-    label: "FAQ",
-  },
-  {
-    href: "/about",
-    label: "About",
-  },
-  {
-    href: "/contact",
-    label: "Contact",
-  },
+  { href: "/pricing", labelKey: "pricing" },
+  { href: "/faq", labelKey: "faq" },
+  { href: "/about", labelKey: "about" },
+  { href: "/contact", labelKey: "contact" },
 ];
 
 const featureList: FeatureProps[] = [
   {
-    title: "Points & Behaviors",
-    description: "Award points for positive behaviors and track student progress.",
+    titleKey: "pointsBehaviorsTitle",
+    descriptionKey: "pointsBehaviorsDescription",
     href: "/#features",
   },
   {
-    title: "Classroom Tools",
-    description: "Random assigners, noise monitors, and more to manage your classroom.",
+    titleKey: "assignmentsGradingTitle",
+    descriptionKey: "assignmentsGradingDescription",
+    href: "/#features",
+  },
+  {
+    titleKey: "classroomToolsTitle",
+    descriptionKey: "classroomToolsDescription",
     href: "/#tools",
-  },
-  {
-    title: "Student Dashboards",
-    description: "Give students visibility into their progress and rewards.",
-    href: "/#features",
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { t } = useTranslation("common");
+  const { t: tNav } = useTranslation("nav");
+
   return (
     <header className="shadow-inner bg-opacity-15 w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl top-5 mx-auto sticky border border-secondary z-40 rounded-2xl flex justify-between items-center p-2 bg-card">
-      <Link href="/" className="font-bold text-lg flex items-center">
+      <Link href="/" className="flex shrink-0 items-center">
         <Image
-          src="/brand/icon-removebg.webp"
-          alt="ClassClarus"
-          width={36}
-          height={36}
-          className="mr-2"
+          src="/brand/logo/icon-and-text-horizontal.webp"
+          alt={t("appName")}
+          width={169}
+          height={53}
+          className="h-9 w-auto"
+          priority
         />
-        ClassClarus
       </Link>
-      {/* <!-- Mobile --> */}
       <div className="flex items-center lg:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
@@ -106,13 +101,12 @@ export const Navbar = () => {
                 <SheetTitle className="flex items-center">
                   <Link href="/" className="flex items-center">
                     <Image
-                      src="/brand/icon-removebg.webp"
-                      alt="ClassClarus"
-                      width={36}
-                      height={36}
-                      className="mr-2"
+                      src="/brand/logo/icon-and-text-horizontal.webp"
+                      alt={t("appName")}
+                      width={169}
+                      height={53}
+                      className="h-9 w-auto"
                     />
-                    ClassClarus
                   </Link>
                 </SheetTitle>
               </SheetHeader>
@@ -124,9 +118,9 @@ export const Navbar = () => {
                   variant="ghost"
                   className="justify-start text-base"
                 >
-                  <Link href="/#features">Features</Link>
+                  <Link href="/#features">{t("features")}</Link>
                 </Button>
-                {routeList.map(({ href, label }) => (
+                {routeList.map(({ href, labelKey }) => (
                   <Button
                     key={href}
                     onClick={() => setIsOpen(false)}
@@ -134,7 +128,7 @@ export const Navbar = () => {
                     variant="ghost"
                     className="justify-start text-base"
                   >
-                    <Link href={href}>{label}</Link>
+                    <Link href={href}>{t(labelKey)}</Link>
                   </Button>
                 ))}
                 <Separator className="my-2" />
@@ -143,44 +137,45 @@ export const Navbar = () => {
                   asChild
                   className="justify-start"
                 >
-                  <Link href={WEBAPP_URL}>
-                    Get Started
+                  <Link href={APP_URL}>
+                    {t("getStarted")}
                     <ArrowRight className="size-4 ml-2" />
                   </Link>
                 </Button>
               </div>
             </div>
 
-            <SheetFooter className="flex-col sm:flex-col justify-start items-start">
+            <SheetFooter className="flex-col sm:flex-col justify-start items-start gap-3">
               <Separator className="mb-2" />
-
-              <ToggleTheme />
+              <div className="flex items-center gap-2">
+                <ToggleTheme />
+                <LanguageSwitcher />
+              </div>
             </SheetFooter>
           </SheetContent>
         </Sheet>
       </div>
 
-      {/* <!-- Desktop --> */}
       <NavigationMenu className="hidden lg:block mx-auto">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger className="bg-card text-base">
-              Features
+              {t("features")}
             </NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4">
-                {featureList.map(({ title, description, href }) => (
-                  <li key={title}>
+                {featureList.map(({ titleKey, descriptionKey, href }) => (
+                  <li key={titleKey}>
                     <NavigationMenuLink asChild>
                       <Link
                         href={href}
                         className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
                       >
                         <div className="text-sm font-medium leading-none">
-                          {title}
+                          {tNav(titleKey)}
                         </div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                          {description}
+                          {tNav(descriptionKey)}
                         </p>
                       </Link>
                     </NavigationMenuLink>
@@ -191,10 +186,10 @@ export const Navbar = () => {
           </NavigationMenuItem>
 
           <NavigationMenuItem>
-            {routeList.map(({ href, label }) => (
+            {routeList.map(({ href, labelKey }) => (
               <NavigationMenuLink key={href} asChild>
                 <Link href={href} className="text-base px-2">
-                  {label}
+                  {t(labelKey)}
                 </Link>
               </NavigationMenuLink>
             ))}
@@ -204,10 +199,11 @@ export const Navbar = () => {
 
       <div className="hidden lg:flex items-center gap-2">
         <ToggleTheme />
+        <LanguageSwitcher />
 
         <Button asChild size="sm" className="font-semibold">
-          <Link href={WEBAPP_URL}>
-            Get Started
+          <Link href={APP_URL}>
+            {t("getStarted")}
             <ArrowRight className="size-4 ml-1" />
           </Link>
         </Button>
